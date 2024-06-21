@@ -10,7 +10,7 @@ function Login() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    axios.defaults.baseURL = "http://localhost:4444";
+    axios.defaults.baseURL = "";
     if (localStorage.getItem("token")) {
       // validateToken();
       axios.defaults.headers.common["Authorization"] =

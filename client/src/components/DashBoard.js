@@ -18,7 +18,7 @@ function DashBoard() {
       body: dataToSend,
     };
 
-    let JSONData = await fetch("http://localhost:4444/deleteAcc", reqOptions);
+    let JSONData = await fetch("/deleteAcc", reqOptions);
     let JSOData = await JSONData.json();
     alert(JSOData.msg);
     if (JSOData.status === "success") {
@@ -36,7 +36,7 @@ function DashBoard() {
         </h3>
         <img
           alt="dashimage"
-          src={`http://localhost:4444/${storeObj.reducer.userDetails.profilePic}`}
+          src={`/${storeObj.reducer.userDetails.profilePic}`}
         ></img>
       </div>
       <button

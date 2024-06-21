@@ -23,7 +23,7 @@ function EditProfile() {
     ageInputRef.current.value = storeObj.reducer.userDetails.age;
     emailInputRef.current.value = storeObj.reducer.userDetails.email;
     setProfilePic(
-      `http://localhost:4444/${storeObj.reducer.userDetails.profilePic}`
+      `/${storeObj.reducer.userDetails.profilePic}`
     );
   },[]);
   useEffect(() => {}, []);
@@ -48,7 +48,7 @@ function EditProfile() {
     };
 
     let JSONData = await fetch(
-      "http://localhost:4444/updateUserDetails",
+      "/updateUserDetails",
       reqOptions
     );
     let JSOData = await JSONData.json();
